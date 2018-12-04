@@ -1,20 +1,24 @@
 <template>
     <div class="tabbar">
-        <div class="tabbar-item" :class="{on:'/home'===$route.path}" @click="selectedTab('/home')">
-            <image class="item-icon"></image>
-            <span class="item-title">首页</span>
+        <div class="tabbar-item" @click="selectedTab('/home')">
+            <img v-if="'/home'===$route.path" class="item-icon" src="../assets/tabbar/tabbar_mainframeHL_24x22_@3x.png"/>
+            <img v-else class="item-icon" src="../assets/tabbar/tabbar_mainframe_24x22_@3x.png"/>
+            <span class="item-title" :class="{on:'/home'===$route.path}">首页</span>
         </div>
-        <div class="tabbar-item" :class="{on:'/search'===$route.path}" @click="selectedTab('/search')">
-            <image class="item-icon"></image>
-            <span class="item-title">搜索</span>
+        <div class="tabbar-item" @click="selectedTab('/search')">
+            <img v-if="'/search'===$route.path" class="item-icon" src="../assets/tabbar/tabbar_contactsHL_26x22_@3x.png"/>
+            <img v-else class="item-icon" src="../assets/tabbar/tabbar_contacts_26x22_@3x.png"/>
+            <span class="item-title" :class="{on:'/search'===$route.path}">搜索</span>
         </div>
-        <div class="tabbar-item" :class="{on:'/shop'===$route.path}" @click="selectedTab('/shop')">
-            <image class="item-icon"></image>
-            <span class="item-title">商店</span>
+        <div class="tabbar-item" @click="selectedTab('/shop')">
+            <img v-if="'/shop'===$route.path" class="item-icon" src="../assets/tabbar/tabbar_discoverHL_22x22_@3x.png"/>
+            <img v-else class="item-icon" src="../assets/tabbar/tabbar_discover_22x22_@3x.png"/>
+            <span class="item-title" :class="{on:'/shop'===$route.path}">商店</span>
         </div>
-        <div class="tabbar-item" :class="{on:'/mine'===$route.path}" @click="selectedTab('/mine')">
-            <image class="item-icon"></image>
-            <span class="item-title">我的</span>
+        <div class="tabbar-item" @click="selectedTab('/mine')">
+            <img v-if="'/mine'===$route.path" class="item-icon" src="../assets/tabbar/tabbar_meHL_22x22_@3x.png"/>
+            <img v-else class="item-icon" src="../assets/tabbar/tabbar_me_22x22_@3x.png"/>
+            <span class="item-title" :class="{on:'/mine'===$route.path}">我的</span>
         </div>
     </div>
 </template>
@@ -22,9 +26,6 @@
 <script>
     export default {
         name: 'TabBar',
-        data: {
-            isActive: true
-        },
         methods: {
             selectedTab(path) {
                 this.$router.replace(path)
@@ -49,6 +50,8 @@
     }
     .tabbar-item {
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         flex: 1;
         height: 49px;
         border-width: 1px;
@@ -58,9 +61,15 @@
     }
     .item-title {
         color: #000000;
-        font-size: 20px;
+        font-size: 10px;
+        margin-top: 3px;
+    }
+    .item-icon {
+        width: 20px;
+        height: 20px;
+        margin-top: 5px;
     }
     .on {
-        color: #FF0000;
+        color: #19A318;
     }
 </style>
