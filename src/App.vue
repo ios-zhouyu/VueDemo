@@ -1,6 +1,9 @@
 <template>
     <div id="app">
-        <router-view/>
+        <NavBar/>
+        <keep-alive>
+            <router-view/>
+        </keep-alive>
         <TabBar/>
     </div>
 </template>
@@ -8,11 +11,13 @@
 <script>
 
     import TabBar from './components/TarBar'
+    import NavBar from './components/NavBar'
 
     export default {
         name: 'App',
         components: {
-            TabBar
+            TabBar,
+            NavBar
         }
     }
 </script>
