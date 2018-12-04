@@ -11,11 +11,13 @@
 	export default {
 		name: "TabBatItem",
         props: {
-			item: Object
+			item: Object,
+            index: Number
         },
 		methods: {
 			selectedTab(path) {
 				this.$router.replace(path)
+                this.$emit('selectedTab', this.index)
 			}
 		}
 	}

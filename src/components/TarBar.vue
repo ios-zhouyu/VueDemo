@@ -30,7 +30,7 @@
         <!--</div>-->
         
         <!--子组件方式-->
-        <TabBarItem v-for="(item, index) in items" :key="index" :item="item"/>
+        <TabBarItem v-for="(item, index) in items" :key="index" :index="index" :item="item" @selectedTab="selectedTab"/>
     </div>
 </template>
 
@@ -71,9 +71,10 @@
             }
         },
         methods: {
-            // selectedTab(path) {
-            //     this.$router.replace(path)
-            // }
+            selectedTab(index) {
+            	const item = this.items[index]
+	            this.$emit('selectedTab', item.title)
+            }
         }
     }
 </script>

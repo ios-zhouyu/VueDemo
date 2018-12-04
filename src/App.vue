@@ -1,10 +1,10 @@
 <template>
     <div id="app">
-        <NavBar/>
+        <NavBar :title="navBarTitle"/>
         <keep-alive>
             <router-view/>
         </keep-alive>
-        <TabBar/>
+        <TabBar @selectedTab="selectedTab"/>
     </div>
 </template>
 
@@ -18,13 +18,22 @@
         components: {
             TabBar,
             NavBar
+        },
+        data() {
+        	return {
+		        navBarTitle: '首页'
+            }
+        },
+        methods: {
+	        selectedTab(title) {
+		        this.navBarTitle = title
+	        }
         }
     }
 </script>
 
 <style>
     #app {
-        text-align: center;
         color: #2c3e50;
         margin-top: 60px;
     }
