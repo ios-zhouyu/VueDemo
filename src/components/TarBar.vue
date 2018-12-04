@@ -1,35 +1,79 @@
 <template>
     <div class="tabbar">
-        <div class="tabbar-item" @click="selectedTab('/home')">
-            <img v-if="'/home'===$route.path" class="item-icon" src="../assets/tabbar/tabbar_mainframeHL_24x22_@3x.png"/>
-            <img v-else class="item-icon" src="../assets/tabbar/tabbar_mainframe_24x22_@3x.png"/>
-            <span class="item-title" :class="{on:'/home'===$route.path}">首页</span>
-        </div>
-        <div class="tabbar-item" @click="selectedTab('/search')">
-            <img v-if="'/search'===$route.path" class="item-icon" src="../assets/tabbar/tabbar_contactsHL_26x22_@3x.png"/>
-            <img v-else class="item-icon" src="../assets/tabbar/tabbar_contacts_26x22_@3x.png"/>
-            <span class="item-title" :class="{on:'/search'===$route.path}">搜索</span>
-        </div>
-        <div class="tabbar-item" @click="selectedTab('/shop')">
-            <img v-if="'/shop'===$route.path" class="item-icon" src="../assets/tabbar/tabbar_discoverHL_22x22_@3x.png"/>
-            <img v-else class="item-icon" src="../assets/tabbar/tabbar_discover_22x22_@3x.png"/>
-            <span class="item-title" :class="{on:'/shop'===$route.path}">商店</span>
-        </div>
-        <div class="tabbar-item" @click="selectedTab('/mine')">
-            <img v-if="'/mine'===$route.path" class="item-icon" src="../assets/tabbar/tabbar_meHL_22x22_@3x.png"/>
-            <img v-else class="item-icon" src="../assets/tabbar/tabbar_me_22x22_@3x.png"/>
-            <span class="item-title" :class="{on:'/mine'===$route.path}">我的</span>
-        </div>
+        <!--普通方式-->
+        <!--<div class="tabbar-item" @click="selectedTab('/home')">-->
+            <!--<img v-if="'/home'===$route.path" class="item-icon" src="../assets/tabbar/tabbar_mainframeHL_24x22_@3x.png"/>-->
+            <!--<img v-else class="item-icon" src="../assets/tabbar/tabbar_mainframe_24x22_@3x.png"/>-->
+            <!--<span class="item-title" :class="{on:'/home'===$route.path}">首页</span>-->
+        <!--</div>-->
+        <!--<div class="tabbar-item" @click="selectedTab('/search')">-->
+            <!--<img v-if="'/search'===$route.path" class="item-icon" src="../assets/tabbar/tabbar_contactsHL_26x22_@3x.png"/>-->
+            <!--<img v-else class="item-icon" src="../assets/tabbar/tabbar_contacts_26x22_@3x.png"/>-->
+            <!--<span class="item-title" :class="{on:'/search'===$route.path}">搜索</span>-->
+        <!--</div>-->
+        <!--<div class="tabbar-item" @click="selectedTab('/shop')">-->
+            <!--<img v-if="'/shop'===$route.path" class="item-icon" src="../assets/tabbar/tabbar_discoverHL_22x22_@3x.png"/>-->
+            <!--<img v-else class="item-icon" src="../assets/tabbar/tabbar_discover_22x22_@3x.png"/>-->
+            <!--<span class="item-title" :class="{on:'/shop'===$route.path}">商店</span>-->
+        <!--</div>-->
+        <!--<div class="tabbar-item" @click="selectedTab('/mine')">-->
+            <!--<img v-if="'/mine'===$route.path" class="item-icon" src="../assets/tabbar/tabbar_meHL_22x22_@3x.png"/>-->
+            <!--<img v-else class="item-icon" src="../assets/tabbar/tabbar_me_22x22_@3x.png"/>-->
+            <!--<span class="item-title" :class="{on:'/mine'===$route.path}">我的</span>-->
+        <!--</div>-->
+        
+        <!--v-for方式-->
+        <!--<div v-for="(item, index) in items" :key="index" class="tabbar-item" @click="selectedTab(item.titleKey)">-->
+            <!--<img v-if="item.titleKey===$route.path" class="item-icon" :src="require('../assets/tabbar/' + item.selectedImg)"/>-->
+            <!--<img v-else class="item-icon" :src="require('../assets/tabbar/' + item.normalImg)"/>-->
+            <!--<span class="item-title" :class="{on:item.titleKey===$route.path}">{{item.title}}</span>-->
+        <!--</div>-->
+        
+        <!--子组件方式-->
+        <TabBarItem v-for="(item, index) in items" :key="index" :item="item"/>
     </div>
 </template>
 
 <script>
+    import TabBarItem from './TabBarItem'
+    
     export default {
         name: 'TabBar',
-        methods: {
-            selectedTab(path) {
-                this.$router.replace(path)
+	    components: {TabBarItem},
+	    data: function () {
+            return {
+	            items: [
+		            {
+			            normalImg: 'tabbar_mainframe_24x22_@3x.png',
+			            selectedImg: 'tabbar_mainframeHL_24x22_@3x.png',
+			            titleKey: '/home',
+			            title: '首页'
+		            },
+		            {
+			            normalImg: 'tabbar_contacts_26x22_@3x.png',
+			            selectedImg: 'tabbar_contactsHL_26x22_@3x.png',
+			            titleKey: '/search',
+			            title: '搜索'
+		            },
+		            {
+			            normalImg: 'tabbar_discover_22x22_@3x.png',
+			            selectedImg: 'tabbar_discoverHL_22x22_@3x.png',
+			            titleKey: '/shop',
+			            title: '商店'
+		            },
+		            {
+			            normalImg: 'tabbar_me_22x22_@3x.png',
+			            selectedImg: 'tabbar_meHL_22x22_@3x.png',
+			            titleKey: '/mine',
+			            title: '我的'
+		            }
+	            ]
             }
+        },
+        methods: {
+            // selectedTab(path) {
+            //     this.$router.replace(path)
+            // }
         }
     }
 </script>
@@ -47,29 +91,8 @@
         right: 0;
         height: 49px;
         background-color: #efefef;
-    }
-    .tabbar-item {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 1;
-        height: 49px;
-        border-width: 1px;
-        border-color: #FF0000;
-        align-items: center;
-        justify-content: center;
-    }
-    .item-title {
-        color: #000000;
-        font-size: 10px;
-        margin-top: 3px;
-    }
-    .item-icon {
-        width: 20px;
-        height: 20px;
-        margin-top: 5px;
-    }
-    .on {
-        color: #19A318;
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-top-color: #dedede;
     }
 </style>

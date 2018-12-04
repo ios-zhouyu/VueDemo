@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a7072c2-a3b8-4158-9135-5022ce7a59ed" name="Default Changelist" comment="增加tabbar">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TarBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TarBar.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            <state relative-caret-position="570">
+              <caret line="30" column="8" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
               <folding>
                 <element signature="e#109#149#0" expanded="true" />
               </folding>
@@ -43,33 +42,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/TarBar.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1330">
-              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+            <state relative-caret-position="378">
+              <caret line="72" column="8" lean-forward="true" selection-start-line="72" selection-start-column="8" selection-end-line="76" selection-end-column="9" />
+              <folding>
+                <element signature="e#2225#3140#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assets/tabbar/tabbar_mainframe_24x22_@3x.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Documents/WeexVue教程/code/gshop-client_final/src/components/FooterGuide/FooterGuide.vue">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/TabBarItem.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="266">
+              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/router/index.js">
+        <entry file="file://$PROJECT_DIR$/../VueHtmlDemo/015-SimpleDemo/src/components/List.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+            <state relative-caret-position="228">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="13" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../VueHtmlDemo/015-SimpleDemo/src/components/Item.vue">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -128,13 +130,15 @@
         <option value="$PROJECT_DIR$/src/pages/mine/Mine.vue" />
         <option value="$PROJECT_DIR$/src/pages/search/Search.vue" />
         <option value="$PROJECT_DIR$/src/pages/shop/Shop.vue" />
-        <option value="$PROJECT_DIR$/src/components/TarBar.vue" />
         <option value="$PROJECT_DIR$/src/components/NavBar.vue" />
         <option value="$PROJECT_DIR$/src/App.vue" />
+        <option value="$PROJECT_DIR$/src/components/TabBatItem.vue" />
+        <option value="$PROJECT_DIR$/src/components/TarBar.vue" />
+        <option value="$PROJECT_DIR$/src/components/TabBarItem.vue" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="35" />
     <option name="y" value="23" />
     <option name="width" value="1294" />
@@ -236,12 +240,12 @@
       <workItem from="1543827379380" duration="1000" />
       <workItem from="1543912164819" duration="2845000" />
       <workItem from="1543916055808" duration="184000" />
-      <workItem from="1543916243157" duration="281000" />
+      <workItem from="1543916243157" duration="3678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9153000" />
+    <option name="totallyTimeSpent" value="12550000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -253,10 +257,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="23" width="1294" height="877" extended-state="0" />
+    <frame x="35" y="23" width="1405" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49808916" visible="true" weight="0.316" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49808916" visible="true" weight="0.19177076" />
       <window_info id="Structure" order="1" sideWeight="0.5019108" side_tool="true" weight="0.3104" />
       <window_info id="npm" order="2" sideWeight="0.50063854" side_tool="true" weight="0.3048" />
       <window_info id="Favorites" order="3" sideWeight="0.50063854" side_tool="true" weight="0.3048" />
@@ -271,7 +275,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3299363" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.09044586" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.09044586" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -347,13 +351,6 @@
     <entry file="file://$PROJECT_DIR$/src/assets/logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TarBar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1330">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/tabbar/tabbar_mainframe_24x22_@3x.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -399,6 +396,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="8" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+          <folding>
+            <element signature="e#109#149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../VueHtmlDemo/015-SimpleDemo/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding>
+            <element signature="e#265#301#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../VueHtmlDemo/015-SimpleDemo/src/components/List.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../VueHtmlDemo/015-SimpleDemo/src/components/Item.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/NavBar.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -406,13 +433,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/TarBar.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        <state relative-caret-position="378">
+          <caret line="72" column="8" lean-forward="true" selection-start-line="72" selection-start-column="8" selection-end-line="76" selection-end-column="9" />
           <folding>
-            <element signature="e#109#149#0" expanded="true" />
+            <element signature="e#2225#3140#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TabBarItem.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
         </state>
       </provider>
     </entry>
