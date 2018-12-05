@@ -31,10 +31,11 @@
         align-items: center;
         height: 44px;
         background-color: #19A318;
-        position: absolute;
+        position: fixed;
         top: 0px;
         left: 0px;
         right: 0px;
+        z-index: 999;
         border-bottom-style: solid;
         border-bottom-width: 1px;
         border-bottom-color: #dedede;

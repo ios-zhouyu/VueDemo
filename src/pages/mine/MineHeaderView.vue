@@ -1,10 +1,10 @@
 <template>
-    <div class="header">
+    <div class="header" @click="loginClick(header.name)">
         <div class="left">
             <img :src="require('../../assets/mine/' + header.icon)" class="icon">
         </div>
         <div class="middle">
-            <span class="login">{{header.name}}</span>
+            <span class="login">{{(header.name == "" || header.name == null) ? "登录/注册" : header.name}}</span>
             <div class="phoneDiv">
                 <img src="../../assets/mine/chatListMultiTalkIcon_15x15_@3x.png" class="phoneImg">
                 <span class="phoneNumber">{{header.phone}}</span>
@@ -21,6 +21,15 @@
 		name: "MineHeaderView",
         props: {
 	        header: Object
+        },
+        methods: {
+	        loginClick(name) {
+	        	if (name === '' || name === null) {
+	        		this.$router.push({path: '/login'})
+                } else {
+	        		console.log('跳入我的资料页面')
+                }
+            }
         }
 	}
 </script>
@@ -36,6 +45,7 @@
         padding-bottom: 10px;
         padding-left: 10px;
         padding-right: 10px;
+        margin-top: 45px;
     }
     
     .left {

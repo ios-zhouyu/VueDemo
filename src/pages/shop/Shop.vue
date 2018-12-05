@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="shop">
         <NavBar title="商店">
             <div class="leftItems" slot="left">
                 <!--<img class="backBtuuon" src="../../assets/navbar/back_icon@3x.png"/>-->
@@ -23,5 +23,7 @@
 </script>
 
 <style scoped>
-
+    .shop {
+        width: 100%;
+    }
 </style>

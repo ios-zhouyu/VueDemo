@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="search">
         <NavBar title="搜索">
             <div class="leftItems" slot="left">
                 <!--<img class="backBtuuon" src="../../assets/navbar/back_icon@3x.png"/>-->
@@ -23,5 +23,7 @@
 </script>
 
 <style scoped>
-
+    .search {
+        width: 100%;
+    }
 </style>

@@ -1,9 +1,9 @@
 <template>
     <div id="app">
         <keep-alive>
-            <router-view class="page"/>
+            <router-view/>
         </keep-alive>
-        <TabBar class="tabbar" @selectedTab="selectedTab"/>
+        <TabBar v-show="$route.meta.showTabBar"/>
     </div>
 </template>
 
@@ -22,9 +22,7 @@
             }
         },
         methods: {
-	        selectedTab(title) {
-		        this.navBarTitle = title
-	        }
+	       
         }
     }
 </script>
@@ -32,14 +30,7 @@
 <style>
     #app {
         color: #2c3e50;
-        margin-top: 44px;
-        margin-right: 0px;
-        margin-left: 0px;
-    }
-    .page {
-        flex: 1;
-    }
-    .tabbar {
-    
+        width: 100%;
+        height: 100%;
     }
 </style>

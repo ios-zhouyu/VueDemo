@@ -86,10 +86,11 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
+        z-index: 999;
         height: 49px;
         background-color: #efefef;
         border-top-style: solid;

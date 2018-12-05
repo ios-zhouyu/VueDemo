@@ -34,7 +34,7 @@
         	return {
         		header: {
         			icon: '2a9aba32623f66a7b96f04db523b5754.png',
-                    name: '登录/注册',
+                    name: '',
                     phone: '15718804712'
                 },
                 middle: {
@@ -76,5 +76,6 @@
 <style scoped>
     .mine {
         background-color: #ededed;
+        width: 100%;
     }
 </style>

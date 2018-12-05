@@ -132,5 +132,7 @@
 <style scoped>
     .home {
         background-color: #fbfbfb;
+        width: 100%;
+        overflow: hidden;
     }
 </style>

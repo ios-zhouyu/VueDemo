@@ -25,6 +25,7 @@
 <style scoped>
     .shopView {
         margin-top: 10px;
+        margin-bottom: 51px;
     }
     .header {
         flex: 1;
