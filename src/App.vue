@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <NavBar :title="navBarTitle"/>
+        <NavBar :title="navBarTitle" :isBackButtonShow="false"/>
         <keep-alive>
             <router-view/>
         </keep-alive>
