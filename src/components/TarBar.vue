@@ -59,7 +59,7 @@
 			            normalImg: 'tabbar_discover_22x22_@3x.png',
 			            selectedImg: 'tabbar_discoverHL_22x22_@3x.png',
 			            titleKey: '/shop',
-			            title: '商店'
+			            title: '订单'
 		            },
 		            {
 			            normalImg: 'tabbar_me_22x22_@3x.png',

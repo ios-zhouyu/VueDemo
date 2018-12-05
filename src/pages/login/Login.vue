@@ -13,19 +13,19 @@
         <div class="middle">
             <div class="middleTop">
                 <span class="item" :class="{msgItemOn: isMsgSelected}" @click="msgSelected">短信登录</span>
-                <span class="item" :class="{msgItemOn: isPwdSelected}" @click="pwdSelected">密码登录</span>
+                <span class="item" :class="{msgItemOn: !isMsgSelected}" @click="pwdSelected">密码登录</span>
             </div>
-            <div v-show="isMsgSelected" class="msgLogin">
-                <input id="account" type="text" placeholder="手机/邮箱/用户名">
-                <input id="password" type="text" placeholder="密码">
-                <input id="code" type="text" placeholder="验证码">
-            </div>
-            <div v-show="isPwdSelected" class="pwdLogin">
-                <input id="phone" type="text" placeholder="手机号">
-                <input id="phoneCode" type="text" placeholder="验证码">
+            <div v-show="isMsgSelected" class="pwdLogin">
+                <input v-model="phone" id="phone" type="text" placeholder="手机号">
+                <input v-model="phoneCode" id="phoneCode" type="text" placeholder="验证码">
                 <span class="tip">温馨提示：未注册硅谷外卖帐号的手机号，登录时将自动注册，且代表已同意<span class="protocol" @click="protocolClick">《用户服务协议》</span></span>
             </div>
-            <p class="loginButton">登录</p>
+            <div v-show="!isMsgSelected" class="msgLogin">
+                <input v-model="account" id="account" type="text" placeholder="手机/邮箱/用户名">
+                <input v-model="password" id="password" type="text" placeholder="密码">
+                <input v-model="code" id="code" type="text" placeholder="验证码">
+            </div>
+            <p class="loginButton" @click="loginClick">登录</p>
         </div>
         <div class="bottom">
             <span class="aboutUs">关于我们</span>
@@ -44,7 +44,11 @@
         data() {
 			return {
                 isMsgSelected: true,
-                isPwdSelected: false
+				account: '',
+				password: '',
+				code: '',
+				phone: '',
+				phoneCode: ''
             }
         },
         methods: {
@@ -56,11 +60,17 @@
             },
 	        msgSelected() {
 	        	this.isMsgSelected = true
-                this.isPwdSelected = false
             },
 	        pwdSelected() {
 		        this.isMsgSelected = false
-		        this.isPwdSelected = true
+            },
+	        loginClick() {
+	        	const {account, password, code, phone, phoneCode} = this
+	        	if (this.isMsgSelected) {//短信验证码登录
+			        console.log(phone, phoneCode)
+                } else {//密码登录
+			        console.log(account, password, code)
+                }
             }
         }
 	}

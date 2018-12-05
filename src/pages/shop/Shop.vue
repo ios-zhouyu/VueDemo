@@ -1,6 +1,6 @@
 <template>
     <div class="shop">
-        <NavBar title="商店">
+        <NavBar title="订单">
             <div class="leftItems" slot="left">
                 <!--<img class="backBtuuon" src="../../assets/navbar/back_icon@3x.png"/>-->
             </div>
