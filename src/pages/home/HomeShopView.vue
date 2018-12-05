@@ -40,6 +40,8 @@
     .headerImg {
         width: 20px;
         height: 20px;
+        padding-right: 8px;
+        padding-left: 8px;
     }
     .headerTitle {
         font-size: 13px;

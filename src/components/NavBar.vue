@@ -30,11 +30,14 @@
         flex-direction: row;
         align-items: center;
         height: 44px;
-        background-color: #efefef;
+        background-color: #19A318;
         position: absolute;
         top: 0px;
         left: 0px;
         right: 0px;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: #dedede;
     }
     .leftItems {
         width: 60px;
@@ -55,6 +58,7 @@
     .title {
         flex: 1;
         text-align: center;
+        color: #ffffff;
     }
     .rightItems {
         width: 60px;

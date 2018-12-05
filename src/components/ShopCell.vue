@@ -50,6 +50,8 @@
         border-bottom-style: solid;
         border-bottom-color: #ededed;
         border-bottom-width: 1px;
+        padding-right: 8px;
+        padding-left: 8px;
     }
     
     .left {

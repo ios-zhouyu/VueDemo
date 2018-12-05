@@ -1,9 +1,9 @@
 <template>
     <div id="app">
         <keep-alive>
-            <router-view/>
+            <router-view class="page"/>
         </keep-alive>
-        <TabBar @selectedTab="selectedTab"/>
+        <TabBar class="tabbar" @selectedTab="selectedTab"/>
     </div>
 </template>
 
@@ -35,5 +35,11 @@
         margin-top: 44px;
         margin-right: 0px;
         margin-left: 0px;
+    }
+    .page {
+        flex: 1;
+    }
+    .tabbar {
+    
     }
 </style>
