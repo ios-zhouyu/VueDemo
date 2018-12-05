@@ -1,6 +1,6 @@
 <template>
     <div class="topView">
-        <div v-for="(item, index) in topList" :key="index" :index="index" class="item">
+        <div v-for="(item, index) in topList" :key="index" :index="index" class="item" @click="selectedItem(item, index)">
             <img :src="require('../../assets/home/' + item.img)" class="img">
             <span class="title">{{item.title}}</span>
         </div>
@@ -8,27 +8,36 @@
 </template>
 
 <script>
+ 
 	export default {
 		name: "HomeTopView",
         props: {
 	        topList: Array
+        },
+        methods: {
+	        selectedItem(item, index) {
+	        	console.log(item, index)
+            }
         }
 	}
 </script>
 
 <style scoped>
     .topView {
-        height: 180px;
+        margin: 0px;
         display: flex;
         flex: 1;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
+        background-color: #ffffff;
     }
     .item {
         display: flex;
+        flex: 1;
         flex-direction: column;
         align-items: center;
+        margin-top: 5px;
     }
     .img {
         width: 50px;
@@ -36,5 +45,6 @@
     }
     .title {
         font-size: 12px;
+        align-self: center;
     }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="home">
         <NavBar title="首页">
             <div class="leftItems" slot="left">
                 <!--<img class="backBtuuon" src="../../assets/navbar/back_icon@3x.png"/>-->
@@ -10,7 +10,7 @@
             </div>
         </NavBar>
         <TopView :topList="topList"/>
-        <ShopView/>
+        <ShopView :shopList="shopList"/>
     </div>
 </template>
 
@@ -85,6 +85,44 @@
 				        title: '水果',
 				        img: '14.jpg'
 			        }
+                ],
+                shopList: [
+                	{
+                		img: '1.jpg',
+                        brand: '品牌',
+                        title: '锄禾日当午,粒粒皆辛苦',
+                        score: 4.5,
+                        sales: 106,
+                        minMoney: 20,
+                        fee: 5
+                    },
+	                {
+		                img: '2.jpg',
+		                brand: '冒牌店',
+		                title: '不买你会后悔,不信试试看',
+		                score: 4.0,
+		                sales: 444,
+		                minMoney: 22,
+		                fee: 3
+	                },
+	                {
+		                img: '3.jpg',
+		                brand: '直营店',
+		                title: '今日特价,快快购买',
+		                score: 3.2,
+		                sales: 555,
+		                minMoney: 24,
+		                fee: 6
+	                },
+	                {
+		                img: '4.jpg',
+		                brand: '专卖店',
+		                title: '本店产品全部6折',
+		                score: 3.9,
+		                sales: 888,
+		                minMoney: 15,
+		                fee: 3
+	                }
                 ]
             }
         }
@@ -92,5 +130,7 @@
 </script>
 
 <style scoped>
-
+    .home {
+        background-color: #fbfbfb;
+    }
 </style>

@@ -32,6 +32,8 @@
 <style>
     #app {
         color: #2c3e50;
-        margin-top: 60px;
+        margin-top: 44px;
+        margin-right: 0px;
+        margin-left: 0px;
     }
 </style>
