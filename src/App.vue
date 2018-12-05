@@ -1,6 +1,5 @@
 <template>
     <div id="app">
-        <NavBar :title="navBarTitle" :isBackButtonShow="false"/>
         <keep-alive>
             <router-view/>
         </keep-alive>
@@ -11,13 +10,11 @@
 <script>
 
     import TabBar from './components/TarBar'
-    import NavBar from './components/NavBar'
 
     export default {
         name: 'App',
         components: {
-            TabBar,
-            NavBar
+            TabBar
         },
         data() {
         	return {
