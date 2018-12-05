@@ -15,14 +15,14 @@
                 <span class="item" :class="{msgItemOn: isMsgSelected}" @click="msgSelected">短信登录</span>
                 <span class="item" :class="{msgItemOn: isPwdSelected}" @click="pwdSelected">密码登录</span>
             </div>
-            <div v-if="isMessageLogin" class="msgLogin">
-                <input type="text" placeholder="手机/邮箱/用户名">
-                <input type="text" placeholder="密码">
-                <input type="text" placeholder="验证码">
+            <div v-show="isMsgSelected" class="msgLogin">
+                <input id="account" type="text" placeholder="手机/邮箱/用户名">
+                <input id="password" type="text" placeholder="密码">
+                <input id="code" type="text" placeholder="验证码">
             </div>
-            <div v-else class="pwdLogin">
-                <input type="text" placeholder="手机号">
-                <input type="text" placeholder="验证码">
+            <div v-show="isPwdSelected" class="pwdLogin">
+                <input id="phone" type="text" placeholder="手机号">
+                <input id="phoneCode" type="text" placeholder="验证码">
                 <span class="tip">温馨提示：未注册硅谷外卖帐号的手机号，登录时将自动注册，且代表已同意<span class="protocol" @click="protocolClick">《用户服务协议》</span></span>
             </div>
             <p class="loginButton">登录</p>
@@ -43,7 +43,6 @@
         },
         data() {
 			return {
-				isMessageLogin: true,
                 isMsgSelected: true,
                 isPwdSelected: false
             }
@@ -58,12 +57,10 @@
 	        msgSelected() {
 	        	this.isMsgSelected = true
                 this.isPwdSelected = false
-                this.isMessageLogin = true
             },
 	        pwdSelected() {
 		        this.isMsgSelected = false
 		        this.isPwdSelected = true
-                this.isMessageLogin = false
             }
         }
 	}

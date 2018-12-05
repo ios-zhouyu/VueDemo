@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/login/Login.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="85" column="25" lean-forward="true" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+            <state relative-caret-position="247">
+              <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
               <folding>
                 <element signature="n#NavBar#0;n#div#0;n#template#0;n#!!top" />
                 <element signature="n#div#0;n#div#0;n#template#0;n#!!top" />
@@ -242,12 +242,12 @@
       <workItem from="1543916055808" duration="184000" />
       <workItem from="1543916243157" duration="7092000" />
       <workItem from="1543978631845" duration="3482000" />
-      <workItem from="1543984069103" duration="19436000" />
+      <workItem from="1543984069103" duration="19746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38882000" />
+    <option name="totallyTimeSpent" value="39192000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -616,8 +616,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/login/Login.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="85" column="25" lean-forward="true" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+        <state relative-caret-position="247">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding>
             <element signature="n#NavBar#0;n#div#0;n#template#0;n#!!top" />
             <element signature="n#div#0;n#div#0;n#template#0;n#!!top" />
