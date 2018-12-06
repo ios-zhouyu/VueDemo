@@ -1,10 +1,10 @@
 <template>
     <div class="home">
-        <NavBar title="首页">
+        <NavBar :title="result.name == null ? '首页' : result.name">
             <div class="leftItems" slot="left">
-                <!--<img class="backBtuuon" src="../../assets/navbar/back_icon@3x.png"/>-->
+                <img class="backBtuuon address" src="../../assets/home/AlbumLocationIcon_24x24_@3x.png"/>
             </div>
-            <div class="rightItems"slot="right" >
+            <div class="rightItems" slot="right" >
                 <!--<img class="rightItem" src="../../assets/navbar/Action_Share_60x60_@3x.png"/>-->
                 <!--<img class="rightItem" src="../../assets/navbar/add_addressicon_16x16_@2x.png"/>-->
             </div>
@@ -18,6 +18,9 @@
 	import NavBar from '../../components/NavBar'
     import TopView from './HomeTopView'
     import ShopView from './HomeShopView'
+    import {mapActions, mapState} from 'vuex'
+    
+    import address from '../../api/address'
     
     export default {
         name: "Home",
@@ -123,8 +126,20 @@
 		                minMoney: 15,
 		                fee: 3
 	                }
-                ]
+                ],
+                result: {}
             }
+        },
+        mounted() {
+        	this.$store.dispatch('getAddress')
+            // this.getAddress()
+	        this.result = address.data
+        },
+        methods: {
+        	// ...mapActions(['getAddress'])
+        },
+        computed: {
+        	// ...mapState['address']
         }
     }
 </script>
@@ -134,5 +149,9 @@
         background-color: #fbfbfb;
         width: 100%;
         overflow: hidden;
+    }
+    .address {
+        width: 20px !important;
+        height: 20px !important;
     }
 </style>

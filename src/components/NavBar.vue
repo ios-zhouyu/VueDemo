@@ -60,6 +60,8 @@
         flex: 1;
         text-align: center;
         color: #ffffff;
+        height: 22px;
+        overflow: hidden;
     }
     .rightItems {
         width: 60px;
